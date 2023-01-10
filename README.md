@@ -28,18 +28,20 @@ If you are on mac, follow the next steps:
 5. Once it is done, type ``git`` on the terminal. If it still throws an error, close and reopen the terminal. If the problem persists, contact me at [my email](mailto:anant.borad@academicsplus.org).
 
 ### Step 3: Install the Library
-1. First, decide where you want to keep the library. Run the following line:
+1. First, decide where you want to keep the library. Run ``cd ~/Desktop~``.
+2. This will create a new folder in your desktop in future steps. If you want to nest the library in a folder (which you can then look at in the file explorer), run ``mkdir nameofthefolder`` and then ``cd nameofthefolder``.
+3. Copy/Paste and Execute the following line in the terminal:
 ```bash
-cd ~/Desktop
+git clone https://github.com/anantborad/objectdetection.git objectdetector
 ```
-2. This will create a new folder in your desktop in future steps. If you want to nest the library 
-3. Execute the following line:
-```bash
-git clone https://github.com/anantborad/objectdetection.git
-```
+Then run ``cd objectdetector``.
+
 
 ## Step 2: Install Requirements
-
+You should now be in the library folder on your terminal. In the library, I have created a shell script that will install everything for you. Run the following line:
+```zsh
+bash ./get_pi_requirements.sh
+```
 
 ## Contributing
 
