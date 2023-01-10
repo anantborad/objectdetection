@@ -16,20 +16,20 @@ cd C:\tflite1
 
 Next, create a Python 3.9 virtual environment by issuing:
 
-```bash
+```shell
 conda create --name tflite1-env python=3.9
 ```
 
 Enter "y" when it asks if you want to proceed. Activate the environment and install the required packages by issuing the commands below. We'll install TensorFlow, OpenCV, and a downgraded version of protobuf. TensorFlow is a pretty big download (about 450MB), so it will take a while.
 
-```bash
+```shell
 conda activate tflite1-env
 pip install tensorflow opencv-python protobuf==3.20.*
 ```
 
 Download the detection scripts from this repository by issuing:
 
-```zsh
+```shell
 curl https://raw.githubusercontent.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/master/TFLite_detection_image.py --output TFLite_detection_image.py
 curl https://raw.githubusercontent.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/master/TFLite_detection_video.py --output TFLite_detection_video.py
 curl https://raw.githubusercontent.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/master/TFLite_detection_webcam.py --output TFLite_detection_webcam.py
@@ -67,7 +67,7 @@ Make sure you have a USB webcam plugged into your computer. If you’re on a lap
 
 From the `tflite1` directory, issue: 
 
-```
+```shell
 python TFLite_detection_webcam.py --modeldir=TFLite_model 
 ```
 
@@ -78,13 +78,13 @@ After a few moments of initializing, a window will appear showing the webcam fee
    <summary>Video</summary>
 To run the video detection script, issue:
 
-```
+```shell
 python TFLite_detection_image.py --modeldir=TFLite_model
 ```
 
 A window will appear showing consecutive frames from the video, with each object in the frame labeled. Press 'q' to close the window and end the script. By default, the video detection script will open a video named 'test.mp4'. To open a specific video file, use the `--video` option:
 
-```
+```shell
 python TFLite_detection_image.py --modeldir=TFLite_model --video='birdy.mp4'
 ```
 
@@ -95,7 +95,7 @@ Note: Video detection will run at a slower FPS than realtime webcam detection. T
    <summary>Web stream</summary>
 To run the script to detect images in a video stream (e.g. a remote security camera), issue: 
 
-```
+```shell
 python TFLite_detection_stream.py --modeldir=TFLite_model --streamurl="http://ipaddress:port/stream/video.mjpeg" 
 ```
 
@@ -114,37 +114,30 @@ python TFLite_detection_stream.py --modeldir=TFLite_model --streamurl="http://ip
    <summary>Image</summary>
 To run the image detection script, issue:
 
-```
+```shell
 python TFLite_detection_image.py --modeldir=TFLite_model
 ```
 
 The image will appear with all objects labeled. Press 'q' to close the image and end the script. By default, the image detection script will open an image named 'test1.jpg'. To open a specific image file, use the `--image` option:
 
-```
+```shell
 python TFLite_detection_image.py --modeldir=TFLite_model --image=squirrel.jpg
 ```
 
 It can also open an entire folder full of images and perform detection on each image. There can only be images files in the folder, or errors will occur. To specify which folder has images to perform detection on, use the `--imagedir` option:
 
-```
+```shell
 python TFLite_detection_image.py --modeldir=TFLite_model --imagedir=squirrels
 ```
 
 Press any key (other than 'q') to advance to the next image. Do not use both the --image option and the --imagedir option when running the script, or it will throw an error.
 
-To save labeled images and a text file with detection results for each image, use the `--save_results` option. The results will be saved to a folder named `<imagedir>_results`. This works well if you want to check your model's performance on a folder of images and use the results to calculate mAP with the [calculate_map_catchuro.py](./util_scripts) script. For example:
-
-```
-python TFLite_detection_image.py --modeldir=TFLite_model --imagedir=squirrels --save_results
-```
-
-The `--noshow_results` option will stop the program from displaying images.
 </details>
 
 **See all command options**
 
 For more information on options that can be used while running the scripts, use the `-h` option when calling them. For example:
 
-```
+```shell
 python TFLite_detection_image.py -h
 ```
