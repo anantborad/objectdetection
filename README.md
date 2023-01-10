@@ -25,7 +25,7 @@ If you are on mac, follow the next steps:
 3. If it does not say ``usage: ...`` and other data and instead throws an error with red text, click on the above link.
 4. Download the correct version of git for your operating system and execute the file once it is completed. A walkthrough window will then pop up.
 4. Click on 'next' for all of the slides and press 'install'. Git will then take less than 2 minutes to install on your computer.
-5. Once it is done, type ``git`` on the terminal. If it still throws an error, close and reopen the terminal. If the problem persists, contact me.
+5. Once it is done, type ``git`` on the terminal. If it still throws an error, close and reopen the terminal. If the problem persists, contact me at [my email](mailto:anant.borad@academicsplus.org).
 
 ### Step 3: Install the Library
 1. First, decide where you want to keep the library. Run the following line:
