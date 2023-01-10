@@ -35,7 +35,7 @@ git clone https://github.com/anantborad/objectdetection.git objectdetector
 Then run ``cd objectdetector``.
 
 
-## Step 2: Install Requirements
+### Step 4: Install Requirements
 You should now be in the library folder on your terminal. In the library, I have created a shell script that will install everything for you. 
 
 In order to run it, however, you first have to install the [Chocolatey Software](https://chocolatey.org/install). Open the website and follow all of the instructions on it to install it onto your computer. The website should have instructions for different operating systems. If not, [email me](mailto:anant.borad@academicsplus.org).
@@ -46,6 +46,22 @@ bash ./get_pi_requirements.sh
 ```
 Congratulations, you've successfully installed the library!
 # Usage
+First, determine what type of data you want to process. You will most likely not want to run it live on your security cameras, so you will likely use either the video script or the image script. The video script is for video feeds (4K or 1080p data will take a really long time, depending on your computer), while the image script is for individual images or a folder of images.
+
+## Installing [The Python Language](https://www.python.org/)
+1. Visit [the official python website](https://www.python.org/downloads/) and download the latest version of it
+2. Run the downloaded file
+3. An installation screen will pop up. Click 'next' on all of the prompts until python starts to install
+## Processing Video Feed
+```zsh
+python TFlite-detection-video.py --modeldir=startermodel --video=test.mp4
+```
+In the path, replace ``test.mp4`` with the video file name and path of your choosing. For the first time, test it as a test.mp4 file is included in the repo. If it doesn't work, [contact me](mailto:anant.borad@academicsplus.org). It's recommended to just move the video into the folder and then just put the file name instead of path tracing.
+
+## Processing Images or Image Groups
+
+### Single Images
+
 
 ## License
 
