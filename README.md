@@ -36,17 +36,15 @@ Then run ``cd objectdetector``.
 
 
 ## Step 2: Install Requirements
-You should now be in the library folder on your terminal. In the library, I have created a shell script that will install everything for you. Run the following line:
+You should now be in the library folder on your terminal. In the library, I have created a shell script that will install everything for you. 
+
+In order to run it, however, you first have to install the [Chocolatey Software](https://chocolatey.org/install). Open the website and follow all of the instructions on it to install it onto your computer. The website should have instructions for different operating systems. If not, [email me](mailto:anant.borad@academicsplus.org).
+
+Run the following line:
 ```zsh
 bash ./get_pi_requirements.sh
 ```
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+# Usage
 
 ## License
 
