@@ -1,6 +1,6 @@
 # EAST Object Detection for Android/Edge Devices
 
-This library is 
+This library is a simple object detection program made to recognize simple household objects and human faces.
 ## Installation
 
 ### Step 1: Install/Open Bash
