@@ -44,6 +44,7 @@ Run the following line:
 ```zsh
 bash ./get_pi_requirements.sh
 ```
+Congratulations, you've successfully installed the library!
 # Usage
 
 ## License
