@@ -1,7 +1,11 @@
 # How to Run TensorFlow Lite Models on Windows
+
 ![](https://img.shields.io/github/directory-file-count/anantborad/objectdetection?color=g)
 ![](https://img.shields.io/github/languages/code-size/anantborad/objectdetection?color=purple)
 ![License](https://img.shields.io/badge/license-MIT-blue)
+
+##### IMPORTANT
+Read the [repository license](LICENSE.md) for the terms and conditions of downloading this software.
 
 This guide shows how to set up a TensorFlow Lite Runtime environment on a Windows PC. We'll use [Anaconda](https://www.anaconda.com/) to create a Python environment to install the TFLite Runtime in. It's easy!
 ![](https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/raw/master/doc/BSR_demo.gif)
