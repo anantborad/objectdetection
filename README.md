@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/github/directory-file-count/anantborad/objectdetection?color=g)
 ![](https://img.shields.io/github/languages/code-size/anantborad/objectdetection?color=purple)
-![License](https://img.shields.io/badge/license-MIT-blue)
+![](https://img.shields.io/github/license/anantborad/objectdetection)
 
 ##### Read the [repository license](LICENSE.md) for the terms and conditions of downloading this software.
 
