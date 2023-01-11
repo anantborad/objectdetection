@@ -4,8 +4,7 @@
 ![](https://img.shields.io/github/languages/code-size/anantborad/objectdetection?color=purple)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-##### IMPORTANT
-Read the [repository license](LICENSE.md) for the terms and conditions of downloading this software.
+##### Read the [repository license](LICENSE.md) for the terms and conditions of downloading this software.
 
 This guide shows how to set up a TensorFlow Lite Runtime environment on a Windows PC. We'll use [Anaconda](https://www.anaconda.com/) to create a Python environment to install the TFLite Runtime in. It's easy!
 ![](https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/raw/master/doc/BSR_demo.gif)
@@ -38,10 +37,10 @@ pip install tensorflow opencv-python protobuf==3.20.*
 Download the detection scripts from this repository by issuing:
 
 ```shell
-curl https://raw.githubusercontent.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/master/TFLite_detection_image.py --output TFLite_detection_image.py
-curl https://raw.githubusercontent.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/master/TFLite_detection_video.py --output TFLite_detection_video.py
-curl https://raw.githubusercontent.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/master/TFLite_detection_webcam.py --output TFLite_detection_webcam.py
-curl https://raw.githubusercontent.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/master/TFLite_detection_stream.py --output TFLite_detection_stream.py
+curl https://raw.githubusercontent.com/anantborad/objectdetection/master/TFLite_detection_image.py --output TFLite_detection_image.py
+curl https://raw.githubusercontent.com/anantborad/objectdetection/master/TFLite_detection_video.py --output TFLite_detection_video.py
+curl https://raw.githubusercontent.com/anantborad/objectdetection/master/TFLite_detection_webcam.py --output TFLite_detection_webcam.py
+curl https://raw.githubusercontent.com/anantborad/objectdetection/master/TFLite_detection_stream.py --output TFLite_detection_stream.py
 ```
 
 ## Step 3. Move TFLite Model into Directory
