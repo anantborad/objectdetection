@@ -153,4 +153,4 @@ python TFLite_detection_image.py -h
 ```
 ### Contact Me
 
-* Email me at [anant.borad@academicsplus.org](mailto:anant.borad@academicsplus.org)
+* Email me at [anant.borad@academicsplus.org](mailto:anant.borad@academicsplus.org) if you have any questions
