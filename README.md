@@ -10,7 +10,7 @@
 Guide written for ![](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white) 7 and later.
 
 This guide shows how to set up a TensorFlow Lite Runtime environment on a Windows PC. We'll use [Anaconda](https://www.anaconda.com/) to create a Python environment to install the TFLite Runtime in. It's easy!
-![](https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/raw/master/doc/BSR_demo.gif)
+![](https://github.com/anantborad/objectdetection/blob/6a6692a83be26bb52e3b1df71a1be57330ae9e82/doc/BSR_demo%20(2).gif)
 ## Step 1. Download and Install Anaconda
 First, install [Anaconda](https://www.anaconda.com/), which is a Python environment manager that greatly simplifies Python package management and deployment. Anaconda allows you to create Python virtual environments on your PC without interfering with existing installations of Python. Go to the [Anaconda Downloads page](https://www.anaconda.com/products/distribution) and click the Download button.
 
