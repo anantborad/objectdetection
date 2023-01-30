@@ -66,7 +66,7 @@ There are four Python scripts to run the TensorFlow Lite object detection model 
 The following instructions show how to run the scripts. These instructions assume your .tflite model file and labelmap.txt file are in the `startermodel` folder in your `tflite1` directory as per the instructions given in the [Setup TFLite Runtime Environment](#step-2-setup-tflite-runtime-environment-on-your-device) guide.
 
 <p align="center">
-   <img width="500" src="https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/raw/master/doc/squirrels!!.png">
+   <img width="500" src="https://github.com/anantborad/objectdetection/blob/6921ffd94d4f811682615abb66315613aa40cea7/doc/squirrels!!.png">
 </p>
 
 If you’d like try using the sample TFLite object detection model provided by Google, simply download it [here](https://storage.googleapis.com/download.tensorflow.org/models/tflite/coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip), unzip it to the `tflite1` folder, and rename it to `cocomodel`. Then, use `--modeldir=coco_ssd_mobilenet_v1_1.0_quant_2018_06_29` rather than `--modeldir=startermodel` when running the script. 
