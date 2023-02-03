@@ -1,8 +1,8 @@
 # How to Run TensorFlow Lite Models on Windows
 
-![](https://img.shields.io/github/directory-file-count/anantborad/objectdetection?color=g)
-![](https://img.shields.io/github/languages/code-size/anantborad/objectdetection?color=purple)
-![](https://img.shields.io/github/repo-size/anantborad/objectdetection)
+![](https://img.shields.io/github/directory-file-count/anantborad/objectdetection?color=gree)
+![](https://img.shields.io/badge/code%20size-1.63%20MB-blue)
+![](https://img.shields.io/github/repo-size/anantborad/objectdetection?color=purple)
 ![](https://img.shields.io/github/license/anantborad/objectdetection)
 
 ##### Read the [repository license](LICENSE.md) for the terms and conditions of downloading this software.
