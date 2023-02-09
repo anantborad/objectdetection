@@ -7,8 +7,6 @@
 
 ##### Read the [repository license](LICENSE.md) for the terms and conditions of downloading this software.
 
-##### Before you go through the guide, download the [Installer](https://github.com/anantborad/objectdetection/releases/download/v0.5.0-alpha/Installer.bat) and run the file. Then navigate to the folder that the batch file created and skip to step 3. I wrote the guide in case the batch file did not work as intended and problems occurred.
-
 Guide written for ![](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white) 7 and later.
 
 This guide shows how to set up a TensorFlow Lite Runtime environment on a Windows PC. We'll use [Anaconda](https://www.anaconda.com/) to create a Python environment to install the TFLite Runtime in. It's easy!
