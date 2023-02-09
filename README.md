@@ -32,16 +32,16 @@ Click on 'Run Anyway'. Wait a little, then a terminal window will pop up. Once i
 
 <img src="doc/Done.PNG"></img>
 
-Close the terminal window. You should then see a folder called `tflite1` in the folder where you moved the `Installer.bat` file in the file explorer. Check to see if it is there, and make sure that there are files in it. If there aren't, **[contact me](mailto:anant.borad@academicsplus.org)**.
+Close the terminal window. You should then see a folder called `tflite1` in the folder where you moved the `Installer.bat` file in the file explorer. Check to see if it is there, and make sure that there are files in it. If there isn't, **[contact me](mailto:anant.borad@academicsplus.org)**.
 
 ### Install Python Packages
-Go to the Start Menu, search for "Anaconda Command Prompt", and click it to open up a command terminal. This following command assumes that you installed the repo in the Desktop. (You can use any other folder location you like, just make sure to modify the commands below to use the correct file paths.) Move into it by issuing (copy and paste by right clicking and clicking on the options) the following commands in the terminal:
+Go to the Start Menu, search for "Anaconda Command Prompt", and click it to open up a command terminal. This following command assumes that you installed the repo in the Desktop. (You can use any other folder location you like, just make sure to modify the command below to use the correct file paths.) Move into it by issuing (copy and paste by right clicking and clicking on the options) the following command in the terminal:
 
-```shell
-cd C:\Desktop\tflite1
+```bash
+cd %userprofile%\Desktop\tflite1
 ```
 
-Install the required packages by issuing the commands below. We'll install TensorFlow, OpenCV, and a downgraded version of protobuf. TensorFlow is a pretty big download (about 450MB), so it will take a while.
+Install the required packages by issuing the command below. We'll install TensorFlow, OpenCV, and a downgraded version of protobuf. TensorFlow is a pretty big download (about 450MB), so it will take a while.
 
 ```shell
 pip install tensorflow opencv-python protobuf==3.20.*
