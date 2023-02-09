@@ -20,7 +20,7 @@ When the download finishes, open the downloaded .exe file and step through the i
 ## Step 2. Set Up The Repository
 ### Install the Repository
 Download the installer in **[the latest version of this repository](https://github.com/anantborad/objectdetection/releases)**.
-Move the `Installer.bat` file into wherever you want the repo folder to be. Then, click on 'run'. The blue dialog box that appears will show something like this:
+Move the `Installer.bat` file into wherever you want the repo folder to be. Then, double click on the file, which will run it. The blue dialog box that appears will show something like this:
 
 <img src="doc/Window Protected.PNG"></img>
 
