@@ -10,50 +10,42 @@
 Guide written for ![](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white) 7 and later.
 
 This guide shows how to set up a TensorFlow Lite Runtime environment on a Windows PC. We'll use [Anaconda](https://www.anaconda.com/) to create a Python environment to install the TFLite Runtime in. It's easy!
+
 ![](https://github.com/anantborad/objectdetection/blob/6a6692a83be26bb52e3b1df71a1be57330ae9e82/doc/BSR_demo%20(2).gif)
 ## Step 1. Download and Install Anaconda
 First, install [Anaconda](https://www.anaconda.com/), which is a Python environment manager that greatly simplifies Python package management and deployment. Anaconda allows you to create Python virtual environments on your PC without interfering with existing installations of Python. Go to the [Anaconda Downloads page](https://www.anaconda.com/products/distribution) and click the Download button.
 
 When the download finishes, open the downloaded .exe file and step through the installation wizard. Use the default install options.
 
-## Step 2. Set Up Virtual Environment and Directory
-Go to the Start Menu, search for "Anaconda Command Prompt", and click it to open up a command terminal. We'll create a folder called `tflite1` directly in the C: drive. (You can use any other folder location you like, just make sure to modify the commands below to use the correct file paths.) Create the folder and move into it by issuing (copy and paste by right clicking and clicking on the options) the following commands in the terminal:
+## Step 2. Set Up The Repository
+### Install the Repository
+Download the installer in **[the latest version of this repository](https://github.com/anantborad/objectdetection/releases)**.
+Move the `Installer.bat` file into wherever you want the repo folder to be. Then, click on 'run'. The blue dialog box that appears will show something like this:
+
+<img src="doc/Window Protected.PNG"></img>
+
+Click on the 'More Info' Button. Then it will look like this:
+
+<img src="doc/Run Anyways.PNG"></img>
+
+Click on 'Run Anyway'. Wait a little, then a terminal window will pop up. Once it says 'Successfully Installed', press any letter key on your keyboard to finish the program.
+
+<img src="doc/Done.PNG"></img>
+
+Close the terminal window. You should then see a folder called `tflite1` in the folder where you moved the `Installer.bat` file in the file explorer. Check to see if it is there, and make sure that there are files in it. If there aren't, **[contact me](mailto:anant.borad@academicsplus.org)**.
+
+### Install Python Packages
+Go to the Start Menu, search for "Anaconda Command Prompt", and click it to open up a command terminal. This following command assumes that you installed the repo in the Desktop. (You can use any other folder location you like, just make sure to modify the commands below to use the correct file paths.) Move into it by issuing (copy and paste by right clicking and clicking on the options) the following commands in the terminal:
 
 ```shell
-mkdir C:\tflite1
-cd C:\tflite1
+cd C:\Desktop\tflite1
 ```
 
-Next, create a Python 3.9 virtual environment by issuing:
+Install the required packages by issuing the commands below. We'll install TensorFlow, OpenCV, and a downgraded version of protobuf. TensorFlow is a pretty big download (about 450MB), so it will take a while.
 
 ```shell
-conda create --name tflite1-env python=3.9
-```
-
-Enter "y" when it asks if you want to proceed. Activate the environment and install the required packages by issuing the commands below. We'll install TensorFlow, OpenCV, and a downgraded version of protobuf. TensorFlow is a pretty big download (about 450MB), so it will take a while.
-
-```shell
-conda activate tflite1-env
 pip install tensorflow opencv-python protobuf==3.20.*
 ```
-
-Download the detection scripts from this repository by issuing:
-
-```shell
-curl https://raw.githubusercontent.com/anantborad/objectdetection/master/TFLite_detection_image.py --output TFLite_detection_image.py
-curl https://raw.githubusercontent.com/anantborad/objectdetection/master/TFLite_detection_video.py --output TFLite_detection_video.py
-curl https://raw.githubusercontent.com/anantborad/objectdetection/master/TFLite_detection_webcam.py --output TFLite_detection_webcam.py
-curl https://raw.githubusercontent.com/anantborad/objectdetection/master/TFLite_detection_stream.py --output TFLite_detection_stream.py
-```
-
-<!-- ## Step 3. Move TFLite Model into Directory
-Next, take the custom TFLite model that was trained and downloaded from the Colab notebook and move it into the `C:\tflite1` directory. If you downloaded it from Colab, it should be in a file called `custom_model_lite.zip`. (If you haven't trained a model yet and just want to test one out, download my "bird, squirrel, raccoon" model by clicking this Dropbox link.) Move that file to the `C:\tflite1` directory. Once it's moved, unzip it using:
-
-```shell
-tar -xf custom_model_lite.zip
-```
-
-At this point, you should have a folder at `C:\tflite1\custom_model_lite` which contains at least a `detect.tflite` and `labelmap.txt` file. -->
 
 ## Step 3. Run TensorFlow Lite Model!
 There are four Python scripts to run the TensorFlow Lite object detection model on an image, video, web stream, or webcam feed. The scripts are based off the label_image.py example given in the [TensorFlow Lite examples GitHub repository](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/examples/python/label_image.py).
