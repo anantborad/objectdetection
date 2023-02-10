@@ -3,6 +3,7 @@
 [![](https://img.shields.io/github/directory-file-count/anantborad/objectdetection?color=gree)](https://github.com/anantborad/objectdetection)
 [![](https://img.shields.io/badge/code%20size-1.63%20MB-blue)](https://github.com/anantborad/objectdetection)
 [![](https://img.shields.io/github/repo-size/anantborad/objectdetection?color=purple)](https://github.com/anantborad/objectdetection)
+[![Python 3.6](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
 [![](https://img.shields.io/github/license/anantborad/objectdetection)](./LICENSE.md)
 
 ##### Read the [repository license](LICENSE.md) for the terms and conditions of downloading this software.
