@@ -48,20 +48,19 @@ pip install tensorflow opencv-python protobuf==3.20.*
 ```
 
 ## Step 3. Run TensorFlow Lite Model!
+
+This part uses the default object detection model provided in this repository. If you would like to build your own model, **[follow the official tutorial](https://www.tensorflow.org/tutorials/customization/custom_training_walkthrough)**.
+
+<p align="center">
+   <img width="500" src="https://github.com/anantborad/objectdetection/blob/6921ffd94d4f811682615abb66315613aa40cea7/doc/squirrels!!.png">
+</p>
+
 There are four Python scripts to run the TensorFlow Lite object detection model on an image, video, web stream, or webcam feed. The scripts are based off the label_image.py example given in the [TensorFlow Lite examples GitHub repository](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/examples/python/label_image.py).
 
 * [TFLite_detection_image.py](TFLite_detection_image.py)
 * [TFLite_detection_video.py](TFLite_detection_video.py)
 * [TFLite_detection_stream.py](TFLite_detection_stream.py)
 * [TFLite_detection_webcam.py](TFLite_detection_webcam.py)
-
-The following instructions show how to run the scripts. These instructions assume your .tflite model file and labelmap.txt file are in the `startermodel` folder in your `tflite1` directory as per the instructions given in the [Setup TFLite Runtime Environment](#step-2-setup-tflite-runtime-environment-on-your-device) guide.
-
-<p align="center">
-   <img width="500" src="https://github.com/anantborad/objectdetection/blob/6921ffd94d4f811682615abb66315613aa40cea7/doc/squirrels!!.png">
-</p>
-
-If you’d like try using the sample TFLite object detection model provided by Google, simply download it [here](https://storage.googleapis.com/download.tensorflow.org/models/tflite/coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip), unzip it to the `tflite1` folder, and rename it to `cocomodel`. Then, use `--modeldir=coco_ssd_mobilenet_v1_1.0_quant_2018_06_29` rather than `--modeldir=startermodel` when running the script. 
 
 <details>
    <summary>Webcam</summary>
@@ -81,13 +80,13 @@ After a few moments of initializing, a window will appear showing the webcam fee
 To run the video detection script, issue:
 
 ```shell
-python TFLite_detection_video.py --modeldir=startermodel
+python TFLite_detection_video.py --modeldir=cocomodel
 ```
 
-A window will appear showing consecutive frames from the video, with each object in the frame labeled. Press 'q' to close the window and end the script. By default, the video detection script will open a video named 'test.mp4' (download [here](test.mp4) and move into the `tflite1` folder). To open a specific video file, use the `--video` option:
+A window will appear showing consecutive frames from the video, with each object in the frame labeled. Press 'q' to close the window and end the script. By default, the video detection script will open a video named 'test.mp4' and move into the `tflite1` folder). To open a specific video file, use the `--video` option:
 
 ```shell
-python TFLite_detection_video.py --modeldir=TFLite_model --video='yourvideofilename.mp4'
+python TFLite_detection_video.py --modeldir=cocomodel --video='yourvideofilename.mp4'
 ```
 
 Note: Video detection will run at a slower FPS than realtime webcam detection. This is mainly because loading a frame from a video file requires more processor I/O than receiving a frame from a webcam.
@@ -98,7 +97,7 @@ Note: Video detection will run at a slower FPS than realtime webcam detection. T
 To run the script to detect images in a video stream (e.g. a remote security camera), issue: 
 
 ```shell
-python TFLite_detection_stream.py --modeldir=startermodel --streamurl="http://ipaddress:port/stream/video.mjpeg" 
+python TFLite_detection_stream.py --modeldir=cocomodel --streamurl="http://ipaddress:port/stream/video.mjpeg" 
 ```
 
 After a few moments of initializing, a window will appear showing the video stream. Detected objects will have bounding boxes and labels displayed on them in real time.
@@ -108,7 +107,7 @@ Make sure to update the URL parameter to the one that is being used by your secu
 If the bounding boxes are not matching the detected objects, probably the stream resolution wasn't detected. In this case you can set it explicitly by using the `--resolution` parameter:
 
 ```shell
-python TFLite_detection_stream.py --modeldir=startermodel --streamurl="http://ipaddress:port/stream/video.mjpeg" --resolution=1920x1080
+python TFLite_detection_stream.py --modeldir=cocomodel --streamurl="http://ipaddress:port/stream/video.mjpeg" --resolution=1920x1080
 ```
 </details>
 
@@ -120,7 +119,7 @@ To run the image detection script, issue:
 python TFLite_detection_image.py --modeldir=startermodel
 ```
 
-The image will appear with all objects labeled. Press 'q' to close the image and end the script. By default, the image detection script will open an image named 'test1.jpg' (download [here](test1.jpeg) and move into the `tflite1` folder). To open a specific image file, use the `--image` option:
+The image will appear with all objects labeled. Press 'q' to close the image and end the script. By default, the image detection script will open an image named 'test1.jpg'. To open a specific image file, use the `--image` option:
 
 ```shell
 python TFLite_detection_image.py --modeldir=startermodel --image=imagename.jpg
