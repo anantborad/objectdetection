@@ -70,7 +70,7 @@ Make sure you have a USB webcam plugged into your computer. If you’re on a lap
 From the `tflite1` directory, issue: 
 
 ```shell
-python TFLite_detection_webcam.py --modeldir=startermodel 
+python TFLite_detection_webcam.py --modeldir=cocomodel 
 ```
 
 After a few moments of initializing, a window will appear showing the webcam feed. Detected objects will have bounding boxes and labels displayed on them in real time.
@@ -117,19 +117,19 @@ python TFLite_detection_stream.py --modeldir=cocomodel --streamurl="http://ipadd
 To run the image detection script, issue:
 
 ```shell
-python TFLite_detection_image.py --modeldir=startermodel
+python TFLite_detection_image.py --modeldir=cocomodel
 ```
 
 The image will appear with all objects labeled. Press 'q' to close the image and end the script. By default, the image detection script will open an image named 'test1.jpg'. To open a specific image file, use the `--image` option:
 
 ```shell
-python TFLite_detection_image.py --modeldir=startermodel --image=imagename.jpg
+python TFLite_detection_image.py --modeldir=cocomodel --image=imagename.jpg
 ```
 
 It can also open an entire folder full of images and perform detection on each image. There can only be images files in the folder, or errors will occur. To specify which folder has images to perform detection on, use the `--imagedir` option:
 
 ```shell
-python TFLite_detection_image.py --modeldir=startermodel --imagedir=folderofimages
+python TFLite_detection_image.py --modeldir=cocomodel --imagedir=folderofimages
 ```
 
 Press any key (other than 'q') to advance to the next image. Do not use both the --image option and the --imagedir option when running the script, or it will throw an error.
